@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my hello world website description">
+    <meta name="keywords" content="web, web development, hello world">
+    <!-- <meta name="robots" content="NOINDEX, NOFOLLOW"> -->
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Register Form</h1>
+      <ul>
+        <li><button onclick="changeLanguage('ca')">Català</button></li>
+        <li><button onclick="changeLanguage('es')">Español</button></li>
+        <li><button onclick="changeLanguage('en')">English</button></li>
+      </ul>
+    </header>
+
+
+    <main>
+      <form name="register" method="POST" data-netlify="true">
+        <div class="form-group">
+          <label for="first-name" id="t_first_name">First Name</label>
+          <input type="text" id="first-name" name="first-name" value="Oriol">
+        </div>
+        <div class="form-group">
+          <label for="last-name" id="t_last_name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Write your last name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="is-required">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="is-required">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="welcome-message">Welcome Message</label>
+          <textarea name="welcome-message" id="welcome-message" ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age">
+        </div>
+        <div class="form-group">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="brithday"> 
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male" class="inline">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female" class="inline">Female</label>
+        </div>
+        <div class="form-group">
+          <label>Interests</label>
+          <input type="checkbox" id="cars" name="interests" value="cars">
+          <label for="cars" class="inline">Cars</label>
+          <input type="checkbox" id="crypto" name="interests" value="crypto">
+          <label for="crypto" class="inline">Crypto</label>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <select name="city" id="city">
+            <option value="bcn">Barcelona</option>
+            <option value="girona" selected>Girona</option>
+            <option value="tarragona">Tarragona</option>
+            <option value="lleida">Lleida</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </main>
+  </body>
+</html>
